@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for FAQ page */
+    .accordion .card {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      border-radius: 0;
+    }
+    .accordion .card-header {
+      background-color: #f8f9fa;
+      border: none;
+    }
+    .accordion .card-body {
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+  
+  <div class="accordion mt-4" id="faqAccordion">
+    <!-- Question 1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Who is the owner of this website?
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
+        <div class="card-body">
+          The owner of this website is Ashrafu Tuyubahe, a young and passionate software developer. He is dedicated to creating innovative solutions and enhancing user experiences.
+          <!-- Add space for your cropped image of Ashrafu here -->
+          <!-- <img src="./img/ASHIFY (1).png" alt="Ashrafu Tuyubahe"> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What technologies did you use to build this website?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+        <div class="card-body">
+          This website was built using a combination of front-end and back-end technologies. For the front-end, CSS and Bootstrap were utilized to create a visually appealing and responsive design. On the back-end, Node.js, Express, MongoDB, and Redis were used to develop the server-side logic and manage the database operations. These technologies were chosen for their robustness, scalability, and efficiency in handling the website's functionalities.
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Can you provide examples of projects you've developed using these technologies?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+        <div class="card-body">
+          Certainly! Here are some examples of projects I've developed using these technologies:
+          <ul>
+            <li>A web application for online shopping built with Node.js, Express, and MongoDB, providing users with a seamless shopping experience.</li>
+            <li>An interactive social media platform developed using React.js, enabling users to connect and share content with each other in real-time.</li>
+            <li>A responsive portfolio website created with HTML, CSS, and Bootstrap, showcasing my skills, projects, and accomplishments in an attractive and organized manner.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <button class="btn btn-link text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            What programming languages are you proficient in?
+          </button>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+        <div class="card-body">
+          I am proficient in various programming languages and frameworks, including:
+          <ul>
+            <li>JavaScript: I have extensive experience in using JavaScript for both front-end and back-end development. This includes frameworks and libraries such as Node.js, Nest.js, React.js, and Next.js.</li>
+            <li>PHP: I am skilled in PHP programming, with expertise in the Laravel framework for building robust and scalable web applications.</li>
+            <li>C: I have a strong foundation in C programming, which has enabled me to develop efficient and optimized software solutions.</li>
+            <li>Python: While not my primary focus, I have some insights into Python and its applications, particularly in data analysis and scripting.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

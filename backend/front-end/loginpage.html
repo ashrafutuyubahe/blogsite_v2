@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Blogsite</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding-top: 56px;
+      }
+      .login-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .login-container .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .login-container .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      .social-login {
+        margin-top: 20px;
+      }
+      .social-login .btn {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./img/ASHIFY (1).png"
+            alt="Logo"
+            class="d-inline-block align-top"
+            height="30"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./FAQs.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Join Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="login-container">
+      <div class="text-center mb-4"></div>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            name="useremail"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="userpassword"
+            class="form-control"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <div class="text-center mt-3">
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+          <p>Or login with:</p>
+          <div class="social-login">
+            <a href="#" class="btn btn-outline-primary btn-block"
+              ><i class="fab fa-facebook-f"></i> Login with Facebook</a
+            >
+            <a href="#" class="btn btn-outline-dark btn-block"
+              ><i class="fab fa-github"></i> Login with GitHub</a
+            >
+            <a href="#" class="btn btn-outline-danger btn-block"
+              ><i class="fab fa-google"></i> Login with Google</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Submit event handler for the login form
+        $("#login-form").submit(function (event) {
+          event.preventDefault();
+
+          var email = $("#email").val();
+          var password = $("#password").val();
+
+          $.ajax({
+            type: "POST",
+            url: "/login/",
+            contentType: "application/json",
+            data: JSON.stringify({ useremail: email, userpassword: password }),
+            success: function (response) {
+              if (response.data.length == 0) {
+                console.log(response)
+              } else {
+                var obj = jQuery.parseJSON(response.data);
+                console.log(obj);
+              }
+              window.location.href = "/userdashboard.html";
+            },
+            error: function (xhr, status, error) {
+              alert(xhr.responseText);
+
+              console.error(xhr.responseText);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

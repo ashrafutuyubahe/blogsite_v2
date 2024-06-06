@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Blog</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background:rgb(7, 7, 7);
+      
+      }
+      .logout-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: gray;
+      }
+      .container {
+        padding: 20px;
+        color: white;
+        
+      }
+      h2 {
+        margin-top: 20px;
+      }
+      .bg-img-container {
+        position: relative;
+        height: 60rem;
+      }
+      .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .img-contents {
+        color: white;
+        font-family: sans-serif;
+        position: absolute;
+        top: 10rem;
+        left: 20px;
+        z-index: 100;
+     
+      }
+      .form-btn-submit{
+     margin: 0 0 4rem 0;
+        }
+        .blooger-heading{
+          font-size: 5rem;
+        }
+        .othercontents{
+          font-size:1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="bg-img-container">
+      <img class="bg-img" src="./img/homepage.jpg" alt="" />
+      <div class="img-contents">
+        <h2 class="blooger-heading">Welcome, Blogger!</h2>
+        <dv class="othercontents">
+          <p>Share your thoughts, experiences, and expertise with the world! Let your creativity shine through your blogs and inspire others.</p>
+          <p>Remember, every great blog starts with a captivating title, an engaging heading, and compelling content. Don't forget to showcase your personality and expertise!</p>
+          <p>Let your readers know who you are and what you do. Your blogs are your voice in the digital world!</p>
+        </dv>
+        
+      </div>
+    </div>
+    
+    </div>
+
+  
+
+    <div class="container">
+      <h2 class="mb-4">Create a New Blog</h2>
+      <form>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Enter blog title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="firstHeading">First Heading:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstHeading"
+            placeholder="Enter first heading"
+          />
+        </div>
+        <div class="form-group">
+          <label for="content">Content:</label>
+          <textarea
+            class="form-control"
+            id="content"
+            rows="5"
+            placeholder="Enter blog content"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="featuredImage">Featured Image:</label>
+          <input type="file" class="form-control-file" id="featuredImage" />
+        </div>
+        <hr />
+        <h4>Author Information:</h4>
+        <div class="form-group">
+          <label for="authorName">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="authorName"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="linkedin"
+            placeholder="Enter your LinkedIn profile link"
+          />
+        </div>
+        <div class="form-group">
+          <label for="github">GitHub Profile:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="github"
+            placeholder="Enter your GitHub profile link"
+          />
+        </div>
+       
+        <button type="submit" class=" form-btn-submit btn btn-secondary btn-lg mb-3">Submit</button>
+
+      </form>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

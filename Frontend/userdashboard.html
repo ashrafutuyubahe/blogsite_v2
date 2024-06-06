@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        padding-top: 56px;
+      }
+      #sidebarCollapse {
+        margin-left: 1rem;
+        border-radius: 2rem;
+        background-color: black;
+      }
+      .dashboard-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .dashboard-navbar {
+        background-color: #343a40;
+        color: white;
+        padding: 15px;
+      }
+      .navbar-toggler-icon {
+        background-color: white;
+      }
+      .dashboard-sidebar {
+        background-color: #f8f9fa;
+        border-right: 1px solid #e9ecef;
+        height: 100vh;
+        z-index: 1050;
+      }
+      .dashboard-content {
+        padding-left: 0;
+      }
+      .dashboard-sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .dashboard-sidebar li {
+        margin-bottom: 10px;
+      }
+      .dashboard-sidebar a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .dashboard-sidebar a:hover {
+        text-decoration: none;
+      }
+      .blog-card {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        z-index: 1000;
+      }
+      .blog-card h4 {
+        margin-bottom: 10px;
+      }
+      .blog-card .body-content {
+        margin-bottom: 15px;
+      }
+      .blog-card .time-posted {
+        font-size: 14px;
+        color: #6c757d;
+        float: right;
+      }
+      .blog-card .read-more {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
+      .blog-card .read-more:hover {
+        background-color: #0056b3;
+      }
+      .pagination {
+        justify-content: center;
+      }
+      .collapsediv ul li {
+        text-decoration: none;
+        list-style: none;
+      }
+      .collapsediv {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top dashboard-navbar"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <button
+                class="btn btn-outline-light m-2"
+                id="hamburgerBtn"
+                type="button"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <select class="form-control m-2">
+                
+                <option>All Blogs</option>
+                <option>Popular</option>
+                <option>Most Followed</option>
+              </select>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 mr-3">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <button class="btn btn-outline-light mr-2">Manage</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div
+      class="collapse"
+      id="sidebarCollapse"
+      style="position: absolute; z-index: 1060"
+    >
+      <div class="collapsediv bg-light sidebar p-4">
+        <ul class="pl-0">
+          <li><a href="#" style="z-index: 1061">Settings</a></li>
+          <li><a href="#" style="z-index: 1061">FAQS</a></li>
+          <li><a href="./createblog.html" style="z-index: 1061">Create Blog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-12 dashboard-content">
+          <div class="blog-card ml-2">
+            <h4>Blog Title 1</h4>
+            <h6>first heading</h6>
+            <div class="body-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                magni ex aperiam animi corporis porro perspiciatis maxime
+                excepturi nesciunt dolores! Dolore cumque sit quaerat sunt id
+                eligendi, facilis aperiam neque, iure totam, nam soluta fugiat!
+                Qui deleniti velit at repellat! This is a short description of
+                the blog content. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </p>
+            </div>
+            <div class="time-posted">9 years ago</div>
+            <button class="read-more">Read More</button>
+          </div>
+
+          <div class="blog-card ml-2">
+            <h4>Blog Title 1</h4>
+            <h6>first heading</h6>
+            <div class="body-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                magni ex aperiam animi corporis porro perspiciatis maxime
+                excepturi nesciunt dolores! Dolore cumque sit quaerat sunt id
+                eligendi, facilis aperiam neque, iure totam, nam soluta fugiat!
+                Qui deleniti velit at repellat! This is a short description of
+                the blog content. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </p>
+            </div>
+            <div class="time-posted">9 years ago</div>
+            <button class="read-more">Read More</button>
+          </div>
+          <div class="blog-card ml-2">
+            <h4>Blog Title 1</h4>
+            <h6>first heading</h6>
+            <div class="body-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                magni ex aperiam animi corporis porro perspiciatis maxime
+                excepturi nesciunt dolores! Dolore cumque sit quaerat sunt id
+                eligendi, facilis aperiam neque, iure totam, nam soluta fugiat!
+                Qui deleniti velit at repellat! This is a short description of
+                the blog content. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </p>
+            </div>
+            <div class="time-posted">9 years ago</div>
+            <button class="read-more">Read More</button>
+          </div>
+          <div class="blog-card ml-2">
+            <h4>Blog Title 1</h4>
+            <h6>first heading</h6>
+            <div class="body-content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+                magni ex aperiam animi corporis porro perspiciatis maxime
+                excepturi nesciunt dolores! Dolore cumque sit quaerat sunt id
+                eligendi, facilis aperiam neque, iure totam, nam soluta fugiat!
+                Qui deleniti velit at repellat! This is a short description of
+                the blog content. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </p>
+            </div>
+            <div class="time-posted">9 years ago</div>
+            <button class="read-more">Read More</button>
+          </div>
+
+          <!-- Add more blog cards here -->
+
+          <!-- Pagination -->
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >Previous</a
+                >
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document
+        .getElementById("hamburgerBtn")
+        .addEventListener("click", function () {
+          document.getElementById("sidebarCollapse").classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>
