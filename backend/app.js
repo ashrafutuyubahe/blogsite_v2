@@ -10,6 +10,7 @@ const Registerusers= require('./routes/registerusers');
 const handleLoign= require('./routes/userlogin');
 const authenticateuser= require('./routes/createblog');
 const cors=  require('cors');
+const production= require('./prod');
 
 app.use(cors());
 app.use(express.json());
@@ -21,7 +22,7 @@ app.get("/", async (req, res) => {
 });
 
 
-
+app.use('/prod',production);
 app.use('/register',Registerusers);
 app.use('/login',handleLoign)
 app.use('/authenticate',authenticateuser);
